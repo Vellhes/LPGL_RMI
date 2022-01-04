@@ -6,19 +6,19 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccueilController">
    <children>
       <Label alignment="CENTER" layoutX="44.0" layoutY="38.0" prefHeight="47.0" prefWidth="548.0" text="Bienvenue dans OBehrLantz" textAlignment="CENTER">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-      <Button fx:id="btn_connexion" layoutX="68.0" layoutY="132.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="149.0" text="Connexion">
+      <Button fx:id="btn_connexion" layoutX="68.0" layoutY="132.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="149.0" text="Connexion" onAction="#switchConnexion">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Button fx:id="btn_inscription" layoutX="370.0" layoutY="132.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="149.0" text="Inscription">
+      <Button fx:id="btn_inscription" layoutX="370.0" layoutY="132.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="149.0" text="Inscription" onAction="#switchInscription">
          <font>
             <Font size="24.0" />
          </font>
