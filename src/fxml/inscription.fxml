@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InscriptionController">
    <children>
       <Label alignment="CENTER" layoutX="217.0" layoutY="30.0" text="Inscription">
          <font>
@@ -59,7 +59,7 @@
             <Font size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btn_valider" layoutX="478.0" layoutY="317.0" mnemonicParsing="false" text="S'inscrire">
+      <Button fx:id="btn_valider" layoutX="478.0" layoutY="317.0" mnemonicParsing="false" text="S'inscrire" onAction="#ajoutClient">
          <font>
             <Font size="16.0" />
          </font>
