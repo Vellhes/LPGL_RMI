@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConnexionController">
    <children>
       <Text layoutX="172.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connexion" textAlignment="CENTER" wrappingWidth="255.5546875">
          <font>
@@ -24,17 +24,17 @@
             <Font size="20.0" />
          </font>
       </Text>
-      <Button fx:id="btn_log" layoutX="375.0" layoutY="240.0" mnemonicParsing="false" text="Se connecter">
+      <Button fx:id="btn_log" layoutX="375.0" layoutY="240.0" mnemonicParsing="false" text="Se connecter" onAction="#chercheClient">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btn_return" layoutX="215.0" layoutY="240.0" mnemonicParsing="false" text="Retour au menu">
+      <Button fx:id="btn_return" layoutX="215.0" layoutY="240.0" mnemonicParsing="false" text="Retour au menu" onAction="#panelAccueil">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <TextField fx:id="txt_email" layoutX="98.0" layoutY="147.0" />
-      <TextField fx:id="txt_mdp" layoutX="339.0" layoutY="147.0" />
+      <TextField fx:id="tf_mail" layoutX="98.0" layoutY="147.0" />
+      <TextField fx:id="tf_mdp" layoutX="339.0" layoutY="147.0" />
    </children>
 </AnchorPane>
