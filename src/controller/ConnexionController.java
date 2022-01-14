@@ -5,8 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.mysql.cj.protocol.Resultset;
-
 import connexion.Connexion;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -48,7 +46,7 @@ public class ConnexionController {
     }
     
     @FXML
-    private void chercheClient() {
+    private void chercheClient(ActionEvent event) throws IOException {
     	String mail, mdp;
     	mail = tf_mail.getText();
     	mdp = tf_mdp.getText();
@@ -62,7 +60,7 @@ public class ConnexionController {
     	else {
     		try {
     			Connection cnx = Connexion.creeConnexion();
-    			stm = cnx.prepareStatement("SELECT * FROM `Client` WHERE mailClient = ? AND mdpClient = ?;");
+    			stm = cnx.prepareStatement("SELECT * FROM `client` WHERE Mail = ? AND Mdp = ?;");
     			stm.setString(1, mail);
     			stm.setString(2, mdp);
     			ResultSet res = stm.executeQuery();
@@ -72,12 +70,24 @@ public class ConnexionController {
         	        alert.setHeaderText(null);
         	    	alert.setContentText("Utilisateur connecté !");
         	    	alert.showAndWait();
+        	    	Parent root = FXMLLoader.load(getClass().getResource("../fxml/liste_magasins.fxml"));
+        	    	stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        	    	stage.setTitle("Liste des magasins");
+        	    	stage.setScene(new Scene(root,600,400));
+        	    	stage.show();
+    			}
+    			else {
+    				alert = new Alert(AlertType.WARNING);
+        			alert.setTitle("Utilisateur Introuvable");
+        	        alert.setHeaderText(null);
+        	    	alert.setContentText("Impossible de trouver l'utilisateur correspondant à ces identifiants.");
+        	    	alert.showAndWait();
     			}
     		}catch(SQLException e) {
     			alert = new Alert(AlertType.ERROR);
     			alert.setTitle("Erreur");
     	        alert.setHeaderText(null);
-    	    	alert.setContentText("Impossible de se connecter");
+    	    	alert.setContentText("Impossible de se connecter : " + e);
     	    	alert.showAndWait();
     		}
     	}

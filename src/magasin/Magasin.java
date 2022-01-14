@@ -27,13 +27,16 @@ public class Magasin {
 	}
 	@Override
 	public String toString() {
-		return "Magasin [Adresse=" + Adresse + ", Nom=" + Nom + ", identifiant=" + Identifiant + "]";
+		return Nom;
 	}
 	public Magasin(String adresse, String nom, int identifiant) {
 		super();
 		Adresse = adresse;
 		Nom = nom;
 		this.Identifiant = identifiant;
+	}
+	public Magasin() {
+		super();
 	}
 
 	

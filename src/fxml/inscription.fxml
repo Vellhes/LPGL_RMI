@@ -54,7 +54,7 @@
             <Font size="20.0" />
          </font>
       </TextField>
-      <Button fx:id="btn_menu" layoutX="334.0" layoutY="317.0" mnemonicParsing="false" text="Retour au menu">
+      <Button fx:id="btn_menu" layoutX="334.0" layoutY="317.0" mnemonicParsing="false" text="Retour au menu" onAction="#panelAccueil">
          <font>
             <Font size="16.0" />
          </font>
