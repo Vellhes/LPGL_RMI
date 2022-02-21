@@ -6,6 +6,7 @@ public class Produit {
 	private String NomProduit;
 	private String DescriptionProduit;
 	private double Tarif;
+	private int quantité;
 	
 	public int getIdProduit() {
 		return IdProduit;

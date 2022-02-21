@@ -69,7 +69,7 @@ public class InscriptionController {
     	else {
     		try {
     			Connection cnx = Connexion.creeConnexion();
-    			stm = cnx.prepareStatement("INSERT INTO `rmi`.`Client` (`idClient`,`mailClient`,`mdpClient`,`nomClient`,`prenomClient`) VALUES (0,?,?,?,?);");
+    			stm = cnx.prepareStatement("INSERT INTO `rmi`.`Client` (`IDClient`, `NomClient`, `PrenomClient`, `AdresseClient`, `CP`, `Ville`, `AdresseClient2`, `Mobile`, `Mail`, `Mdp`) VALUES (0,?,?,'',0,'','','',?,?);");
     			stm.setString(1, mail);
     			stm.setString(2, mdp);
     			stm.setString(3, nom);
@@ -84,7 +84,7 @@ public class InscriptionController {
     			alert = new Alert(AlertType.ERROR);
     			alert.setTitle("Erreur");
     	        alert.setHeaderText(null);
-    	    	alert.setContentText("Impossible d'ajouter le client");
+    	    	alert.setContentText("Impossible d'ajouter le client " + e);
     	    	alert.showAndWait();
     		}
     	}

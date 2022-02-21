@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="323.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.311" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListeMagasinsController">
+<AnchorPane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="323.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.311" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListeMagasinsController">
    <children>
       <Label fx:id="lbl_bienvenue" alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="60.0" prefHeight="27.0" prefWidth="519.0" text="Bienvenue" textAlignment="CENTER">
          <font>
@@ -20,7 +20,7 @@
          </font>
       </Label>
       <ComboBox fx:id="combo_magasins" layoutX="59.0" layoutY="200.0" prefHeight="39.0" prefWidth="204.0" />
-      <Button fx:id="btn_go" layoutX="338.0" layoutY="200.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="141.0" text="M'y rendre">
+      <Button fx:id="btn_go" layoutX="338.0" layoutY="200.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="141.0" text="M'y rendre" onAction = "#chargeMagasin">
          <font>
             <Font size="18.0" />
          </font>
